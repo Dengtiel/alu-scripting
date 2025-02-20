@@ -1,7 +1,23 @@
 #!/usr/bin/python3
 """
-1. Top Ten
-Fetch and print the titles of the first 10 hot posts of a given subreddit.
+Reddit API - Top Ten Hot Posts
+
+This module contains a function that queries the Reddit API to fetch and print
+the titles of the first 10 hot posts from a given subreddit.
+
+Functions:
+    - top_ten(subreddit): Fetches and prints the first 10 hot post titles.
+    
+Usage:
+    The function should be called with the subreddit name as an argument.
+    If the subreddit is invalid or inaccessible, it prints "None".
+
+Example:
+    >>> top_ten("python")
+    Python 3.11 is out now!
+    Best resources to learn Python?
+    How do I improve my Python skills?
+    ...
 """
 import requests
 
@@ -44,4 +60,3 @@ def top_ten(subreddit):
         print("None")
     except ValueError:  # Handles JSON decoding errors
         print("None")
-
